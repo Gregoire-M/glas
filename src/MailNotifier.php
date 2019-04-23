@@ -20,7 +20,7 @@ class MailNotifier
             (new \Swift_SmtpTransport(
                 $config['config']['mail']['host'],
                 $config['config']['mail']['port'],
-                'ssl'
+                'tls'
             ))
             ->setUsername($config['config']['mail']['username'])
             ->setPassword($config['config']['mail']['password'])
