@@ -6,14 +6,31 @@
         }
     },
     "require": {
+        "php": "^7.3",
         "ext-json": "*",
         "ext-sqlite3": "*",
         "guzzlehttp/guzzle": "^6",
-        "symfony/yaml": "^4.1",
+        "symfony/yaml": "^4",
         "tolerance/tolerance": "^0.4.2",
-        "symfony/lock": "^4.1"
+        "symfony/lock": "^4",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "swiftmailer/swiftmailer": "^6.2"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "parameter-key": "config",
+            "file": "config.yml"
+        }
     }
 }

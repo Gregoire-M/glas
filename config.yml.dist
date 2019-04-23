@@ -1,0 +1,8 @@
+config:
+    mail:
+        host: smtp.example.org
+        port: 25
+        sender: gregoire@marchal.email
+        recipient: gregoire.marchal@gmail.com
+    applications:
+        symfonic: https://symfonic.fr/fr

@@ -1,3 +1,4 @@
+config.yml
 vendor
 autoload.php
 sqlite.db
