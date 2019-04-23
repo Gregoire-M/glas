@@ -2,6 +2,8 @@ config:
     mail:
         host: smtp.example.org
         port: 25
+        username: test
+        password: test
         sender: gregoire@marchal.email
         recipient: gregoire.marchal@gmail.com
     applications:

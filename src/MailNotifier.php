@@ -16,10 +16,15 @@ class MailNotifier
     {
         $config = Yaml::parseFile(__DIR__.'/../config.yml');
 
-        $this->mailer = new \Swift_Mailer(new \Swift_SmtpTransport(
-            $config['config']['mail']['host'],
-            $config['config']['mail']['port']
-        ));
+        $this->mailer = new \Swift_Mailer(
+            (new \Swift_SmtpTransport(
+                $config['config']['mail']['host'],
+                $config['config']['mail']['port'],
+                'ssl'
+            ))
+            ->setUsername($config['config']['mail']['username'])
+            ->setPassword($config['config']['mail']['password'])
+        );
 
         $this->sender = $config['config']['mail']['sender'];
         $this->recipient = $config['config']['mail']['recipient'];
