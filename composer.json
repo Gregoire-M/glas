@@ -1,0 +1,19 @@
+{
+    "name": "gregoire-m/glas",
+    "autoload": {
+        "psr-4": {
+            "Glas\\": "src"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "ext-sqlite3": "*",
+        "guzzlehttp/guzzle": "^6",
+        "symfony/yaml": "^4.1",
+        "tolerance/tolerance": "^0.4.2",
+        "symfony/lock": "^4.1"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}

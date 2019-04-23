@@ -1,0 +1,4 @@
+vendor
+autoload.php
+sqlite.db
+*.log
